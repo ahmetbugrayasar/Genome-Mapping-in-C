@@ -4,9 +4,10 @@ void genome_to_fastq(struct Genome genome, char* description, char* quality) {
         return;
     }
     char filename[128];
-    sprintf(filename, "%s.fastq", description);
-    FILE* file = fopen(filename, "w");
-    if (file == NULL) {
+    sprintf_s(filename, 128, "%s.fastq", description);
+    FILE* file;
+    errno_t error = fopen_s(&file, filename, "w");
+    if (error != 0) {
         fprintf(stderr, "Error: unable to open file %s\n", filename);
         return;
     }
