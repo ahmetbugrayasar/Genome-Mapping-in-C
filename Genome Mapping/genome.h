@@ -88,6 +88,25 @@ char* replicate_genome(struct Genome genome);
 /// <param name="quality">Array of characters containing the FastQ record's quality field.</param>
 void genome_to_fastq(struct Genome genome, char* description, char* quality);
 
-//TODO: Read from a FASTQ file (might need to alter the Genome structure to add a name and quality string to it.
-
+/*
+ * <summary>
+ * Reads a genome from a FASTQ file.
+ *
+ * This function reads a FASTQ file and stores the data in a Genome structure.
+ * The FASTQ file is expected to have the following format:
+ *
+ * "@{description}\n{sequence}\n+\n{quality}\n"
+ *
+ * The function reads the first, second, and fourth lines of the file and stores the data as follows:
+ * - The first line (description) is ignored.
+ * - The second line (sequence) is stored as the Genome structure's sequence field. The newline character is removed.
+ * - The fourth line (quality) is ignored.
+ *
+ * If the file cannot be opened for reading, an error message is printed to `stderr`.
+ * </summary>
+ *
+ * @param filename The name of the FASTQ file to read.
+ * @return The genome read from the file. If an error occurs, the genome's sequence field is set to NULL.
+ */
+struct Genome read_genome_from_fastq(char* filename);
 #endif

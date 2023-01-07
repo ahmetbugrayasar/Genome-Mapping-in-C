@@ -135,6 +135,7 @@
     <ClCompile Include="initialize_genome.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="print_genome.c" />
+    <ClCompile Include="read_genome_from_fastq.c" />
     <ClCompile Include="replicate_genome.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -13,4 +13,4 @@ void genome_to_fastq(struct Genome genome, char* description, char* quality) {
     }
     fprintf(file, "@%s\n%s\n+\n%s\n", description, genome.sequence, quality);
     fclose(file);
-}
+} 

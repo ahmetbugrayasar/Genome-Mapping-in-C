@@ -1,1 +1,11 @@
-﻿
+﻿  count_nucleotide.c
+  genome_to_fastq.c
+  initialize_genome.c
+D:\Dev\Genome-Mapping-in-C\Genome Mapping\initialize_genome.c(9,18): warning C4013: 'strlen' undefined; assuming extern returning int
+  main.c
+D:\Dev\Genome-Mapping-in-C\Genome Mapping\main.c(18,2): warning C4013: 'free' undefined; assuming extern returning int
+  print_genome.c
+  replicate_genome.c
+D:\Dev\Genome-Mapping-in-C\Genome Mapping\replicate_genome.c(9,5): warning C4013: 'strcpy' undefined; assuming extern returning int
+  Generating Code...
+  Genome Mapping.vcxproj -> D:\Dev\Genome-Mapping-in-C\x64\Debug\Genome Mapping.exe
