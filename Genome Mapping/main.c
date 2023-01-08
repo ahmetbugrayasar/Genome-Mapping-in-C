@@ -1,3 +1,4 @@
+
 #include"genome.h"
 
 int main(void)
@@ -15,6 +16,9 @@ int main(void)
 
 	genome_to_fastq(genome1, "Genome_1", "IIIIIIII");
 
+	struct Genome genome2 = read_genome_from_fastq("Genome_1.fastq");
+
+	printf("Result Genome: %s", genome2.sequence);
 	free(copy);
 	return 0;
 

@@ -1,7 +1,7 @@
-
 #ifndef GENOME_H
 #define GENOME_H
 #include<stdio.h>
+
 /// <summary>
 /// Basic Genome structure with a Nucleotide sequence and length of the sequence.
 /// </summary>
